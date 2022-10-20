@@ -7,7 +7,7 @@ Usage
 include_once dirname(__FILE__) . '/src/FredJWT.php';
 
 // init
-$FredJWT = new FredJWT('MySecretKey', 1000); //Set your secret and the expiration time
+$FredJWT = new FredJWT('MySecretKey', 1000); //Set your secret and the expiration time (in seconds)
 
 // Create Token
 $userdata = [];

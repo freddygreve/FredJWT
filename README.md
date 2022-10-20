@@ -10,8 +10,10 @@ include_once dirname(__FILE__) . '/src/FredJWT.php';
 $FredJWT = new FredJWT('MySecretKey', 1000); //Set your secret and the expiration time (in seconds)
 
 // Create Token
-$userdata = [];
-$userdata["username"] = "Freddy"; //Add some data
+$userdata = [   //Add some data
+  "username" => "Freddy",
+  "user_id" => "1234"
+];
 $token = $FredJWT->create_token($userdata); //create a token with your data
 
 // Verify token
